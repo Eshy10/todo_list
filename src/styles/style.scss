@@ -9,6 +9,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: darken($color: #000000, $amount: 0);
+
+    .interactive {
+        cursor: pointer;
+    }
 }
 
 nav {
@@ -17,6 +21,6 @@ nav {
     align-items: baseline !important;
 }
 
-.project {
+#newProj, #newTask {
     display: none;
 }

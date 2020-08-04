@@ -2,26 +2,29 @@ const content = (() => {
   const rowElement = document.createElement('div');
   rowElement.classList.add('row');
   const colElement = document.createElement('div');
-  colElement.classList.add('col-4');
+  colElement.classList.add('col-2');
   colElement.innerHTML = `
-  <h6 class="text-secondary mb-3"><i class="fas fa-sticky-note mt-3 text-warning font-weight-bold"></i> All Notes</h6>
-  <h6 class="text-secondary mb-3"><i class="fas fa-object-group text-warning"></i>Create Project</h6>
-  <h6 class="text-secondary mb-3"><i class="fas fa-users-cog text-warning"></i>Travel</h6>
+  <h6 class="text-secondary mb-3 interactive"><i class="fas fa-sticky-note mt-3 text-warning font-weight-bold"></i> All Notes</h6>
+  <h6 class="text-secondary mb-3 interactive" onclick="createProject()"><i class="fas fa-object-group text-warning"></i>Create Project</h6>
+  <h6 class="text-secondary mb-3 interactive" onclick="createTask()"><i class="fas fa-sticky-note text-warning"></i>Create a note</h6>
+  <h6 class="text-secondary mb-3 interactive"><i class="fas fa-users-cog text-warning"></i>Travel</h6>
   `;
   const bigColElement = document.createElement('div');
-  bigColElement.classList.add('col-8');
+  bigColElement.classList.add('col-10');
   const projectDiv = document.createElement('div');
   projectDiv.classList.add('project');
+  projectDiv.id = 'newProj';
   const projectForm = document.createElement('form');
   projectForm.innerHTML = `
   <div class="form-group">
-  <label for="exampleInputEmail1">Create a Project</label>
+  <label class="text-secondary" for="exampleInputEmail1">Create a Project</label>
   <input type="text" class="form-control" id="projectTitle" aria-describedby="emailHelp">
 </div>
 <button type="submit" class="btn btn-warning">Submit</button>
   `;
   projectDiv.appendChild(projectForm);
   const taskDiv = document.createElement('div');
+  taskDiv.id = 'newTask';
   taskDiv.setAttribute('class', 'task mt-4');
   const taskForm = document.createElement('form');
   const titleForm = document.createElement('div');
@@ -39,8 +42,8 @@ const content = (() => {
   const priorityForm = document.createElement('div');
   priorityForm.classList.add('form-group');
   priorityForm.innerHTML = `
-  <label for="exampleFormControlSelect2" class="text-secondary">Task Priority</label>
-  <select multiple class="form-control" id="exampleFormControlSelect2">
+  <label for="priority" class="text-secondary">Task Priority</label>
+  <select class="form-control" id="priority">
     <option>important</option>
     <option>primary</option>
     <option>secondary</option>
@@ -49,12 +52,12 @@ const content = (() => {
   const noteForm = document.createElement('div');
   noteForm.classList.add('form-group');
   noteForm.innerHTML = `
-  <label for="exampleFormControlTextarea1" class="text-secondary">Notes</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <label for="notes" class="text-secondary">Notes</label>
+  <textarea class="form-control" id="notes" rows="3"></textarea>
   `;
   const sumbitButton = document.createElement('button');
   sumbitButton.setAttribute('class', 'btn btn-warning');
-  sumbitButton.setAttribute('type', 'submit');
+  sumbitButton.setAttribute('type', 'button');
   sumbitButton.textContent = 'Submit';
   taskForm.appendChild(titleForm);
   taskForm.appendChild(dateForm);
