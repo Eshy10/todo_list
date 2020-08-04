@@ -26,12 +26,28 @@ const projectForm = () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const title = document.getElementById('projectTitle').value;
-    if (title != '') {
+    if (title !== '') {
       tasks.project.push(title);
     }
   });
 };
 
+const tasksForm = () => {
+const taskForm = document.getElementById('newTask').children[0];
+taskForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+ const taskTitle = document.getElementById('textTask').value;
+ const taskDate = document.getElementById('dateTask').value;
+ const priority = document.getElementById('priority');
+ const selectedPriority = priority.options[priority.selectedIndex].text;
+ const note = document.getElementById('notes').value;
+if (taskTitle !== '' || taskDate !== '' || selectedPriority !== '' || note !== '') {
+  const result = new tasks.Note(taskTitle, note, taskDate, selectedPriority)
+  tasks.notes.push(result);
+}
+})
+};
+
 export default {
-  createProject, createTask, hideForms, projectForm,
+  createProject, createTask, hideForms, projectForm, tasksForm,
 };

@@ -33,3 +33,4 @@ window.hideForms = () => {
 };
 
 forms.projectForm();
+forms.tasksForm();

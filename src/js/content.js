@@ -57,7 +57,7 @@ const content = (() => {
   `;
   const sumbitButton = document.createElement('button');
   sumbitButton.setAttribute('class', 'btn btn-warning');
-  sumbitButton.setAttribute('type', 'button');
+  sumbitButton.setAttribute('type', 'submit');
   sumbitButton.textContent = 'Submit';
   taskForm.appendChild(titleForm);
   taskForm.appendChild(dateForm);
