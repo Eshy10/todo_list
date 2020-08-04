@@ -1,0 +1,23 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "module"
+    },
+    "extends": ["airbnb-base"],
+    "parser": "babel-eslint",
+    "rules": {
+      "no-shadow": "off",
+      "no-param-reassign": "off",
+      "eol-last": "off",
+      "arrow-parens": "off"
+    },
+    "ignorePatterns": [
+      "dist/",
+      "build/"
+    ]
+  }
