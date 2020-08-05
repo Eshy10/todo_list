@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/Eshy10/Tic-Tac-Toe-Js/feature/index.html)
+[Live Demo Link](https://raw.githack.com/Eshy10/todo_list/feature/index.html)
 
 
 ## Usage

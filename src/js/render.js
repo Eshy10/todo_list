@@ -9,7 +9,7 @@ const show = (num) => {
   cardTask.setAttribute('class', 'card');
   cardTask.setAttribute('style', 'width: 18rem;');
   for (let i = 0; i < note.notes.length; i += 1) {
-  cardTask.innerHTML = `
+    cardTask.innerHTML = `
   <div class="card-body">
   <h5 class="card-title">${taskNote.title}</h5>
   <p class="card-text">${taskNote.notes}</p>

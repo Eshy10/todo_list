@@ -76,7 +76,6 @@ const clearElement = () => {
 };
 
 
-
 export default {
   createProject, createTask, hideForms, projectForm, tasksForm, save, clearElement,
 };
