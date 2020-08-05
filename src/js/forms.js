@@ -33,6 +33,7 @@ const projectForm = () => {
     const title = document.getElementById('projectTitle').value;
     if (title !== '') {
       tasks.project.push(title);
+      save();
       form.reset();
     }
     show.showProject();
@@ -53,12 +54,18 @@ const tasksForm = () => {
     if (taskTitle !== '' || taskDate !== '' || selectedPriority !== '' || note !== '' || selectedPrject !== '') {
       const result = new tasks.Note(taskTitle, note, taskDate, selectedPriority, selectedPrject);
       tasks.notes.push(result);
+      save();
       taskForm.reset();
     }
     show.showAll();
   });
 };
 
+const save = () => {
+  localStorage.setItem('notes', JSON.stringify(tasks.notes));
+  localStorage.setItem('projects', JSON.stringify(tasks.project));
+};
+
 export default {
-  createProject, createTask, hideForms, projectForm, tasksForm,
+  createProject, createTask, hideForms, projectForm, tasksForm, save,
 };
