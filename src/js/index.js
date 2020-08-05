@@ -46,9 +46,16 @@ window.showProjCard = (num) => {
   render.showProjCard(num);
 };
 
+window.removeNote = (num) => {
+  render.removeNote(num);
+};
+
+
 forms.projectForm();
 forms.tasksForm();
 forms.clearElement();
 
 render.showAll();
 render.showProject();
+render.removeNote();
+

@@ -25,6 +25,11 @@ const hideForms = () => {
   projectForm.style.display = 'none';
   taskForm.style.display = 'none';
 };
+const save = () => {
+  localStorage.setItem('notes', JSON.stringify(tasks.notes));
+  localStorage.setItem('projects', JSON.stringify(tasks.project));
+};
+
 
 const projectForm = () => {
   const form = document.getElementById('newProj').children[0];
@@ -61,19 +66,16 @@ const tasksForm = () => {
   });
 };
 
-const save = () => {
-  localStorage.setItem('notes', JSON.stringify(tasks.notes));
-  localStorage.setItem('projects', JSON.stringify(tasks.project));
-};
-
 const clearElement = () => {
   const reset = document.querySelector('#clear');
   reset.addEventListener('click', () => {
-    console.log('clicked')
-   localStorage.clear();
-   location.reload();
-  })
-}
+    localStorage.clear();
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
+  });
+};
+
+
 
 export default {
   createProject, createTask, hideForms, projectForm, tasksForm, save, clearElement,

@@ -8,6 +8,7 @@ const show = (num) => {
   const cardTask = document.createElement('div');
   cardTask.setAttribute('class', 'card');
   cardTask.setAttribute('style', 'width: 18rem;');
+  for (let i = 0; i < note.notes.length; i += 1) {
   cardTask.innerHTML = `
   <div class="card-body">
   <h5 class="card-title">${taskNote.title}</h5>
@@ -15,7 +16,9 @@ const show = (num) => {
   <span class="badge badge-secondary">${taskNote.date}</span>
   <span class="badge badge-secondary">${taskNote.priority}</span>
   <span class="badge badge-secondary">${taskNote.category}</span>
+  <span onclick="removeNote(${i})" class="badge badge-danger delete">delete</span>
     </div>`;
+  }
   container.appendChild(cardTask);
 };
 
@@ -46,6 +49,11 @@ const showProject = () => {
   form.hideForms();
 };
 
+function removeNote(num) {
+  note.notes.splice(num, 1);
+  form.save();
+}
+
 export default {
-  show, showAll, showProject, showProjCard,
+  show, showAll, showProject, showProjCard, removeNote,
 };
