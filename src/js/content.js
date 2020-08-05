@@ -1,3 +1,6 @@
+import note from './notes'
+
+
 const content = (() => {
   const rowElement = document.createElement('div');
   rowElement.classList.add('row');
@@ -53,6 +56,10 @@ const content = (() => {
   `;
   const dropdownForm = document.createElement('div');
   dropdownForm.classList.add('form-group');
+  dropdownForm.innerHTML = `<label for="dropdown-category" class="text-secondary">Task Project</label>
+  <select class="form-control" id="dropdown-category">
+  </select>`
+  
   const noteForm = document.createElement('div');
   noteForm.classList.add('form-group');
   noteForm.innerHTML = `
@@ -70,7 +77,6 @@ const content = (() => {
   taskForm.appendChild(noteForm);
   taskForm.appendChild(sumbitButton);
   taskDiv.appendChild(taskForm);
-
   const task = document.createElement('div');
   task.setAttribute('class', 'row row-cols-1 row-cols-md-2 mt-4');
   const colTask = document.createElement('div');
@@ -87,4 +93,13 @@ const content = (() => {
   return rowElement;
 })();
 
-export default content;
+const updateDrop = () => {
+  const dropdownCat = document.getElementById('dropdown-category')
+  let drop = '';
+  for (let i = 0; i < note.project.length; i += 1){
+    drop += `<option onclick="showProj(${i})">${note.project[i]}</option>`
+  }
+  dropdownCat.innerHTML = drop;
+}
+
+export default { content, updateDrop };

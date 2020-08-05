@@ -18,7 +18,8 @@ library.add(fas, far, fab);
 dom.i2svg();
 
 const container = document.querySelector('.container-fluid');
-container.appendChild(content);
+container.appendChild(content.content);
+content.updateDrop()
 document.body.insertBefore(navbar, container);
 
 window.createTask = () => {

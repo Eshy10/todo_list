@@ -14,6 +14,7 @@ const show = (num) => {
   <p class="card-text">${taskNote.notes}</p>
   <a href="#" class="card-link">${taskNote.date}</a>
   <a href="#" class="card-link">${taskNote.priority}</a>
+  <a href="#" class="card-link">${taskNote.category}</a>
     </div>`;
     container.appendChild(cardTask)
 };
