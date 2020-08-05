@@ -28,14 +28,14 @@ const showAll = () => {
 };
 
 const showProjCard = (num) => {
-   document.getElementById('card-container').innerHTML = '';
+  document.getElementById('card-container').innerHTML = '';
   for (let i = 0; i < note.notes.length; i += 1) {
-      if (note.notes[i].category === note.project[num]){
-        show(i);
-      }
+    if (note.notes[i].category === note.project[num]) {
+      show(i);
+    }
   }
   form.hideForms();
-}
+};
 
 const showProject = () => {
   const projectContainer = document.querySelector('#projects');
@@ -46,4 +46,6 @@ const showProject = () => {
   form.hideForms();
 };
 
-export default { show, showAll, showProject, showProjCard };
+export default {
+  show, showAll, showProject, showProjCard,
+};
