@@ -57,5 +57,4 @@ forms.clearElement();
 
 render.showAll();
 render.showProject();
-render.removeNote();
 

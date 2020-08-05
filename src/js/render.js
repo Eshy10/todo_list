@@ -16,7 +16,7 @@ const show = (num) => {
   <span class="badge badge-secondary">${taskNote.date}</span>
   <span class="badge badge-secondary">${taskNote.priority}</span>
   <span class="badge badge-secondary">${taskNote.category}</span>
-  <span onclick="removeNote(${i})" class="badge badge-danger delete">delete</span>
+  <span onclick="removeNote(${note.notes.indexOf(taskNote)})" class="badge badge-danger delete">delete</span>
     </div>`;
   }
   container.appendChild(cardTask);
@@ -52,6 +52,7 @@ const showProject = () => {
 function removeNote(num) {
   note.notes.splice(num, 1);
   form.save();
+  showAll();
 }
 
 export default {
