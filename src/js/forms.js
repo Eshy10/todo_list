@@ -66,6 +66,15 @@ const save = () => {
   localStorage.setItem('projects', JSON.stringify(tasks.project));
 };
 
+const clearElement = () => {
+  const reset = document.querySelector('#clear');
+  reset.addEventListener('click', () => {
+    console.log('clicked')
+   localStorage.clear();
+   location.reload();
+  })
+}
+
 export default {
-  createProject, createTask, hideForms, projectForm, tasksForm, save,
+  createProject, createTask, hideForms, projectForm, tasksForm, save, clearElement,
 };

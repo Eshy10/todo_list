@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     background-color: darken($color: #000000, $amount: 0);
 
-    .interactive {
+    .interactive, #clear {
         cursor: pointer;
     }
 }

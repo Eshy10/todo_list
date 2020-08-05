@@ -12,9 +12,9 @@ const show = (num) => {
   <div class="card-body">
   <h5 class="card-title">${taskNote.title}</h5>
   <p class="card-text">${taskNote.notes}</p>
-  <a href="#" class="card-link">${taskNote.date}</a>
-  <a href="#" class="card-link">${taskNote.priority}</a>
-  <a href="#" class="card-link">${taskNote.category}</a>
+  <span class="badge badge-secondary">${taskNote.date}</span>
+  <span class="badge badge-secondary">${taskNote.priority}</span>
+  <span class="badge badge-secondary">${taskNote.category}</span>
     </div>`;
   container.appendChild(cardTask);
 };

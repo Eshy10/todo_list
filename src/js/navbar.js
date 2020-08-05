@@ -6,6 +6,7 @@ const navbar = (() => {
   navBrand.setAttribute('href', '#');
   navBrand.innerHTML = '<i class="fas fa-thumbtack"></i>TodoApp';
   const resetElement = document.createElement('p');
+  resetElement.id = 'clear';
   resetElement.setAttribute('class', 'text-warning reset');
   resetElement.innerHTML = '<i class="fas fa-sync"></i>Reset';
   nav.appendChild(navBrand);
