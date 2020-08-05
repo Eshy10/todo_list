@@ -1,4 +1,4 @@
-import note from './notes'
+import note from './notes';
 
 
 const content = (() => {
@@ -12,7 +12,7 @@ const content = (() => {
   <h6 class="text-secondary mb-3 interactive" onclick="createTask()"><i class="fas fa-sticky-note text-warning"></i>Create a note</h6>
   `;
   const project = document.createElement('div');
-  project.id = 'projects'
+  project.id = 'projects';
   colElement.appendChild(project);
   const bigColElement = document.createElement('div');
   bigColElement.classList.add('col-10');
@@ -58,8 +58,8 @@ const content = (() => {
   dropdownForm.classList.add('form-group');
   dropdownForm.innerHTML = `<label for="dropdown-category" class="text-secondary">Task Project</label>
   <select class="form-control" id="dropdown-category">
-  </select>`
-  
+  </select>`;
+
   const noteForm = document.createElement('div');
   noteForm.classList.add('form-group');
   noteForm.innerHTML = `
@@ -94,12 +94,12 @@ const content = (() => {
 })();
 
 const updateDrop = () => {
-  const dropdownCat = document.getElementById('dropdown-category')
+  const dropdownCat = document.getElementById('dropdown-category');
   let drop = '';
-  for (let i = 0; i < note.project.length; i += 1){
-    drop += `<option onclick="showProj(${i})">${note.project[i]}</option>`
+  for (let i = 0; i < note.project.length; i += 1) {
+    drop += `<option>${note.project[i]}</option>`;
   }
   dropdownCat.innerHTML = drop;
-}
+};
 
 export default { content, updateDrop };

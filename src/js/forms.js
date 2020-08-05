@@ -1,5 +1,5 @@
 import tasks from './notes';
-import show from './render';
+import show from './render'; // eslint-disable-line
 import content from './content';
 
 const createProject = () => {
@@ -47,7 +47,7 @@ const tasksForm = () => {
     const taskDate = document.getElementById('dateTask').value;
     const priority = document.getElementById('priority');
     const selectedPriority = priority.options[priority.selectedIndex].text;
-    const project = document.getElementById('dropdown-category')
+    const project = document.getElementById('dropdown-category');
     const selectedPrject = project.options[project.selectedIndex].text;
     const note = document.getElementById('notes').value;
     if (taskTitle !== '' || taskDate !== '' || selectedPriority !== '' || note !== '' || selectedPrject !== '') {

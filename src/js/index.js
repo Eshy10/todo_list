@@ -19,7 +19,7 @@ dom.i2svg();
 
 const container = document.querySelector('.container-fluid');
 container.appendChild(content.content);
-content.updateDrop()
+content.updateDrop();
 document.body.insertBefore(navbar, container);
 
 window.createTask = () => {
@@ -35,12 +35,16 @@ window.hideForms = () => {
 };
 
 window.showAll = () => {
-  render.showAll()
-}
+  render.showAll();
+};
 
 window.showProject = () => {
-  render.showProject()
-}
+  render.showProject();
+};
+
+window.showProjCard = (num) => {
+  render.showProjCard(num);
+};
 
 forms.projectForm();
 forms.tasksForm();
