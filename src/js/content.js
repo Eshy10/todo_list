@@ -71,16 +71,7 @@ const content = (() => {
   const colTask = document.createElement('div');
   colTask.setAttribute('class', 'col mb-4');
   const cardTask = document.createElement('div');
-  cardTask.setAttribute('class', 'card');
-  cardTask.setAttribute('style', 'width: 18rem;');
-  cardTask.innerHTML = `
-  <div class="card-body">
-  <h5 class="card-title">Travel to Bali</h5>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="card-link">Date</a>
-  <a href="#" class="card-link">Priority</a>
-</div>
-  `;
+  cardTask.setAttribute('id', 'card-container');
   colTask.appendChild(cardTask);
   task.appendChild(colTask);
   bigColElement.appendChild(projectDiv);

@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-free/js/brands';
 import navbar from './navbar';
 import content from './content';
 import forms from './forms';
+import render from './render';
 
 library.add(fas, far, fab);
 
@@ -34,3 +35,5 @@ window.hideForms = () => {
 
 forms.projectForm();
 forms.tasksForm();
+
+render.showAll;
