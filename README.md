@@ -1,6 +1,6 @@
 # Todo_List
 
-> here you can add all your todos with specified categories, priority and time.
+> A Todo list app where you can add all your todos with specified categories, priority and time.
 
 ![screencapture-localhost-8080-2020-08-05-13_38_48](https://user-images.githubusercontent.com/52670459/89413831-5ea53780-d721-11ea-8f0a-7bcb410a1825.png)
 

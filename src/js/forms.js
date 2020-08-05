@@ -70,8 +70,7 @@ const clearElement = () => {
   const reset = document.querySelector('#clear');
   reset.addEventListener('click', () => {
     localStorage.clear();
-    // eslint-disable-next-line no-restricted-globals
-    location.reload();
+    window.location.reload();
   });
 };
 
