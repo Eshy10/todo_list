@@ -2,7 +2,7 @@
 
 > A Todo list app where you can add all your todos with specified categories, priority and time.
 
-![screencapture-localhost-8080-2020-08-05-13_38_48](https://user-images.githubusercontent.com/52670459/89413831-5ea53780-d721-11ea-8f0a-7bcb410a1825.png)
+![Screenshot (18)](https://user-images.githubusercontent.com/52670459/89434078-0844f280-d73b-11ea-8f02-7dc04c36cea8.png)
 
 
 ## Built With
