@@ -4,11 +4,13 @@ const content = (() => {
   const colElement = document.createElement('div');
   colElement.classList.add('col-2');
   colElement.innerHTML = `
-  <h6 class="text-secondary mb-3 interactive"><i class="fas fa-sticky-note mt-3 text-warning font-weight-bold"></i> All Notes</h6>
+  <h6 class="text-secondary mb-3 interactive" onclick="showAll()"><i class="fas fa-sticky-note mt-3 text-warning font-weight-bold"></i> All Notes</h6>
   <h6 class="text-secondary mb-3 interactive" onclick="createProject()"><i class="fas fa-object-group text-warning"></i>Create Project</h6>
   <h6 class="text-secondary mb-3 interactive" onclick="createTask()"><i class="fas fa-sticky-note text-warning"></i>Create a note</h6>
-  <h6 class="text-secondary mb-3 interactive"><i class="fas fa-users-cog text-warning"></i>Travel</h6>
   `;
+  const project = document.createElement('div');
+  project.id = 'projects'
+  colElement.appendChild(project);
   const bigColElement = document.createElement('div');
   bigColElement.classList.add('col-10');
   const projectDiv = document.createElement('div');
@@ -49,6 +51,8 @@ const content = (() => {
     <option>secondary</option>
   </select>
   `;
+  const dropdownForm = document.createElement('div');
+  dropdownForm.classList.add('form-group');
   const noteForm = document.createElement('div');
   noteForm.classList.add('form-group');
   noteForm.innerHTML = `
@@ -62,6 +66,7 @@ const content = (() => {
   taskForm.appendChild(titleForm);
   taskForm.appendChild(dateForm);
   taskForm.appendChild(priorityForm);
+  taskForm.appendChild(dropdownForm);
   taskForm.appendChild(noteForm);
   taskForm.appendChild(sumbitButton);
   taskDiv.appendChild(taskForm);

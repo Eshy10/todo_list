@@ -33,7 +33,16 @@ window.hideForms = () => {
   forms.hideForms();
 };
 
+window.showAll = () => {
+  render.showAll()
+}
+
+window.showProject = () => {
+  render.showProject()
+}
+
 forms.projectForm();
 forms.tasksForm();
 
-render.showAll;
+render.showAll();
+render.showProject();

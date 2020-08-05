@@ -1,10 +1,12 @@
 import tasks from './notes';
+import show from './render';
 
 const createProject = () => {
   const taskForm = document.getElementById('newTask');
   const projectForm = document.getElementById('newProj');
   taskForm.style.display = 'none';
   projectForm.style.display = 'block';
+  document.getElementById('card-container').style.opacity = '0';
 };
 
 const createTask = () => {
@@ -12,6 +14,7 @@ const createTask = () => {
   const projectForm = document.getElementById('newProj');
   projectForm.style.display = 'none';
   taskForm.style.display = 'block';
+  document.getElementById('card-container').style.opacity = '0';
 };
 
 const hideForms = () => {
@@ -28,7 +31,9 @@ const projectForm = () => {
     const title = document.getElementById('projectTitle').value;
     if (title !== '') {
       tasks.project.push(title);
+      form.reset();
     }
+    show.showProject();
   });
 };
 
@@ -36,15 +41,17 @@ const tasksForm = () => {
 const taskForm = document.getElementById('newTask').children[0];
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
- const taskTitle = document.getElementById('textTask').value;
- const taskDate = document.getElementById('dateTask').value;
- const priority = document.getElementById('priority');
- const selectedPriority = priority.options[priority.selectedIndex].text;
- const note = document.getElementById('notes').value;
+ let taskTitle = document.getElementById('textTask').value;
+ let taskDate = document.getElementById('dateTask').value;
+ let priority = document.getElementById('priority');
+ let selectedPriority = priority.options[priority.selectedIndex].text;
+ let note = document.getElementById('notes').value;
 if (taskTitle !== '' || taskDate !== '' || selectedPriority !== '' || note !== '') {
   const result = new tasks.Note(taskTitle, note, taskDate, selectedPriority)
   tasks.notes.push(result);
+  taskForm.reset();
 }
+show.showAll();
 })
 };
 
