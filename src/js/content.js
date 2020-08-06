@@ -22,7 +22,7 @@ const content = (() => {
   projectForm.innerHTML = `
   <div class="form-group">
   <label class="text-secondary" for="exampleInputEmail1">Create a Project</label>
-  <input type="text" class="form-control" id="projectTitle" aria-describedby="emailHelp">
+  <input type="text" class="form-control" id="projectTitle" required>
 </div>
 <button type="submit" class="btn btn-warning">Submit</button>
   `;
@@ -35,13 +35,13 @@ const content = (() => {
   titleForm.classList.add('form-group');
   titleForm.innerHTML = `
   <label for="exampleFormControlInput1" class="text-secondary">Task title</label>
-  <input type="text" class="form-control" id="textTask" placeholder="enter new task">
+  <input type="text" class="form-control" id="textTask" placeholder="enter new task" required>
   `;
   const dateForm = document.createElement('div');
   dateForm.classList.add('form-group');
   dateForm.innerHTML = `
   <label for="exampleFormControlInput1" class="text-secondary">Date</label>
-  <input type="date" class="form-control" id="dateTask">
+  <input type="date" class="form-control" id="dateTask" required>
   `;
   const priorityForm = document.createElement('div');
   priorityForm.classList.add('form-group');
@@ -63,7 +63,7 @@ const content = (() => {
   noteForm.classList.add('form-group');
   noteForm.innerHTML = `
   <label for="notes" class="text-secondary">Notes</label>
-  <textarea class="form-control" id="notes" rows="3"></textarea>
+  <textarea class="form-control" id="notes" rows="3" required></textarea>
   `;
   const sumbitButton = document.createElement('button');
   sumbitButton.setAttribute('class', 'btn btn-warning');
