@@ -1,6 +1,5 @@
 import note from './notes';
 
-
 const content = (() => {
   const rowElement = document.createElement('div');
   rowElement.classList.add('row');
@@ -89,6 +88,7 @@ const content = (() => {
   rowElement.appendChild(bigColElement);
   return rowElement;
 })();
+
 
 const updateDrop = () => {
   const dropdownCat = document.getElementById('dropdown-category');
