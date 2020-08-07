@@ -1,0 +1,30 @@
+@import "~bootstrap/scss/bootstrap";
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: darken($color: #000, $amount: 0);
+
+  .interactive,
+  .delete,
+  #clear {
+    cursor: pointer;
+  }
+}
+
+nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+}
+
+#newProj,
+#newTask {
+  display: none;
+}
